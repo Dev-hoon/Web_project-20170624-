@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box{
+			height: 200px;
+			width: 20%;
+			float: left;
+			border: 2px solid black;
+			box-sizing: border-box;
+		}
+		.big{
+			overflow: hidden;
+		}
+		@media(max-width: 1000px){
+			.box{
+				width: 25%;
+			}
+		}
+		@media(max-width: 700px){
+			.box{
+				width: 33.333%
+			}
+		}
+		.mobile{
+			display: none;
+			height: 60px;
+			background: green;
+			line-height: 60px;
+			color: orange;
+			padding: 20px 0;
+		}
+		@media(max-width: 1000px){
+			.mobile{
+				display: block;
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="mobile">모바일 버전용</div>
+<div class="big">
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+</div>
+</body>
+</html>

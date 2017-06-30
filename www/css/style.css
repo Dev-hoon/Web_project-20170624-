@@ -1,0 +1,18 @@
+.header a{
+	font-size: 36px;
+	line-height: 2;
+}
+.header a:hover{
+	background: yellow;
+	font-size: 60px;
+}
+.header a.active{
+	color: red;
+}
+input{
+	color: blue;
+}
+.active{
+	font-weight: bold;
+	color: white;
+}

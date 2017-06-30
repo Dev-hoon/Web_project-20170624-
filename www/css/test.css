@@ -1,0 +1,22 @@
+.common{
+	float: left;
+	width: 30.333%;
+	height: 600px;
+	margin: 0 1.5%;
+	border: 1px solid #e0e0e0;
+	box-sizing: border-box;
+}
+.red{
+	background: red;
+	background-image: url(https://image.freepik.com/free-vector/hexagonal-pattern_1051-833.jpg);
+	background-size: 30%;
+	/*cover 하면 크기가 딱 맞음*/
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+.blue{background: blue}
+.green{background: green}
+.ov{
+	overflow: hidden;
+}

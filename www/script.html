@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <style type="text/css">
+  	.box{
+  		transition: all 1000ms;
+  	}
+  	.box.active{
+  		background: ivory;
+  		font-size: 20px;
+  	}
+  	.a{
+  		height: 2000px;
+  		background: ivory;
+  	}
+  	header{
+  		position:fixed;
+  		top: -60px;
+  		left: 0;
+  		width: 100%;
+  		height: 60px;
+  		background: black;
+  		transition: all 300ms;
+  	}
+  	header.active{
+  		top: 0px;
+
+  	}
+  	.bob{
+  		color: black;
+  		background: blue;
+  		width: 100px;
+  		height: 60px;
+  		opacity: 0.1;
+  		transition:  all 300ms;
+  	}
+  	.bob.active{
+  		opacity: 1;
+  		  	}
+  </style>
+</head>
+<body>
+	<header></header>
+	<div onclick="naming('aiden kim')">클릭</div>
+	<div onclick="test2(this)">grey</div>
+	<div class="box active" onclick="abc('this');">서울대</div>
+	<div class="box " onclick="abc('this');">연세대</div>
+	<div class="box " onclick="abc('this');">고려대</div>
+	<div class="a"></div>
+	<div class="bob">하하하</div>
+	<script>
+	//스크롤 위치 잡는 법
+	//$(window).height();
+	//$('.b').offset().top;
+	$(window).scroll(function(){
+		var top=$(window).scrollTop();
+		//console.log(top);
+		if(top>=100){
+			$('header').addClass('active');
+			$('.bob').addClass('active');
+		}
+		else{
+			$('header').removeClass('active');
+			$('.bob').removeClass('active');
+		}
+		
+	})
+	function abc(hun){
+		$('.box').removeClass('active');
+		$(hun).addClass('active');
+		//$(hun).toggleClass('active')
+	}
+	//-값 변환
+	//$('css선택자').함수이름('속성명', '속성값');
+	//$('css선택자').함수이름('값');
+
+	//-값 가져오기
+	//var a = $('css선택자').함수이름('속성명', '속성값');
+	//var a = $('css선택자').함수이름('속성값');
+
+	//css 나 태그명으로 선택하 때에는 ''나""를 붙여야함.
+	//rhis를 이용하여 가져온 변수를 선택할 땨에는 변수 이름만 
+		var text="<a href='http://naver.com'>2</a>";
+		document.write("<a href='http://naver.com'>1</a>");
+		document.write(text);
+		var name = "태훈";
+		document.write("제 이름은 "+ name +" 입니다.")
+		function test(){
+			alert("자료가 존재하지 않습니다");
+		}
+		function naming(name){
+			alert(name);
+		}
+		function test2(color){
+			//color.style.background=color.innerHTML;
+			$(color).css('background','grey');
+			$(color).text('click event');
+			var back=$(color).css('background');
+			var te=$(color).text();
+			alert(te);
+		}
+		
+		if(name!=null){
+			naming(name);
+		}
+		else
+			test();
+
+
+	</script>	
+</body>
+</html>

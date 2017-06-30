@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.css" integrity="sha256-uFXU+L9l27b7Sf4aMJg21jb/8NalxQwRzBWFoQ6t46s=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.js" integrity="sha256-svqsXQRbYHHJDHaV9VR6ZjKKfjii1XVeL+cvq7U/5T8=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	$('#fullpage').fullpage({
+	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+	menu: '#myMenu'
+	});
+});
+
+</script>
+<style type="text/css">
+	.section{
+		background: ivory;
+	}
+	#myMenu a{
+		top: 0;
+		left: 0;
+		z-index: 9999;
+	}
+</style>
+</head>
+<body>
+<ul id="myMenu">
+	<li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
+	<li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
+	<li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
+	<li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li>
+</ul>
+<div id="fullpage">
+	<div class="firstPage" data-menuanchor="firstPage">Some section</div>
+	<div class="secondPage" data-menuanchor="secondPage">Some section</div>
+	<div class="thirdPage" data-menuanchor="thirdPage">Some section</div>
+	<div class="fourthPage" data-menuanchor="fourthPage">Some section</div>
+	<div class="lastPage" data-menuanchor="lastPage">Some section</div>
+</div>
+</body>
+</html>
