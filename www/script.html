@@ -7,12 +7,13 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
+
   <style type="text/css">
   	.box{
   		transition: all 1000ms;
   	}
   	.box.active{
-  		background: ivory;
+  		background: green;
   		font-size: 20px;
   	}
   	.a{
@@ -72,9 +73,9 @@
 		
 	})
 	function abc(hun){
-		$('.box').removeClass('active');
-		$(hun).addClass('active');
-		//$(hun).toggleClass('active')
+		//$('.box').removeClass('active');
+		//$(hun).addClass('active');
+		$('.box').toggleClass('active');
 	}
 	//-값 변환
 	//$('css선택자').함수이름('속성명', '속성값');
